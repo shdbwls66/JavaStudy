@@ -1,20 +1,18 @@
 public class day2_Test3 {
   public static void main(String[] args) {
 
-    /*
-     * short sVal = 10;
-     * short result = (short) (sVal + 10);
-     * System.out.println(result);
-     */
 
-    /*
-    * int a = 10 + 220;
-    * System.out.println(a);
-    */
+//     short sVal = 10;
+//     short result = (short) (sVal + 10);
+//     System.out.println(result);
 
-    float myFloat = 9.75f;
-    float anotherFloat = myFloat * 2;
-    System.out.println("Original float value: " + (int) myFloat);
-    System.out.println("Calculated float value: " + (byte) anotherFloat);
+
+//      long a = 9999999999L;
+//      System.out.println(a);
+
+    double myDouble = 9.545;
+    double anotherFloat = myDouble * 2;
+    System.out.println("Original float value: " + myDouble);
+    System.out.println("Calculated float value: " + anotherFloat);
   }
 }
