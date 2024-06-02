@@ -519,3 +519,18 @@ case2
 `isSunny = false;` 이므로 1번 채택
 
 ![image](https://github.com/shdbwls66/backendJava/assets/168792230/88bccb15-695d-4f08-9d4c-c4bb7071ed23)
+
+<hr>
+
+# 참고
+<aside>
+    
+    💡 오늘의 단축키
+    
+    `ctrl + d` : 복제
+    
+    `ctrl + b` : 선택 요소에 대한 정보?
+    
+    `ctrl + p` : 파라미터에 대한 정보?
+
+</aside>
