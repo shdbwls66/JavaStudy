@@ -109,38 +109,46 @@ System.out.println(1);
   ![image](https://github.com/shdbwls66/backendJava/assets/168792230/21d992b8-8ad6-4116-9ebe-b17e20bc096a)
 
 
+<aside>
 
-💡 참고
+    💡 참고
 
-- `public class 파일명` 범위 내에서 코드 작성하기
-- 파일명 바뀌면 class 옆에 것도 바꾸기..
-- 파일 생성 시 src 디렉토리 내에 생성할 것!!!
+    - `public class 파일명` 범위 내에서 코드 작성하기
 
-- 자바 클래스 파일 기본 구조?!
+    - 파일명 바뀌면 class 옆에 것도 바꾸기..
 
-```java
-public class Test {
+    - 파일 생성 시 src 디렉토리 내에 생성할 것!!!
 
-    public static void main(String[] args) {
-        System.out.println("Hello World");
+    - 자바 클래스 파일 기본 구조?!
+
+    ```java
+    public class Test {
+
+        public static void main(String[] args) {
+            System.out.println("Hello World");
+        }
     }
-}
-```
-
-
-❓ 단축키!!
-
-- `alt` + `shift` +  `↑` or `↓` : 코드 위치 바꾸기
-  
-    ![image](https://github.com/shdbwls66/backendJava/assets/168792230/bc3bb74a-778a-40a9-9e0e-7b6b636eb3c4)
-
+    ```
     
-- `psvm` + `Enter` : main 메소드 생성
-  
-    ![image](https://github.com/shdbwls66/backendJava/assets/168792230/d58b77a2-dee8-4707-b2ba-4361931d75e7)
+</aside>
 
+<aside>
+
+    ❓ 단축키!!
+
+    - `alt` + `shift` +  `↑` or `↓` : 코드 위치 바꾸기
     
-- `shift` + `F6` : 파일 이름 바꾸기
+        ![image](https://github.com/shdbwls66/backendJava/assets/168792230/bc3bb74a-778a-40a9-9e0e-7b6b636eb3c4)
+
+        
+    - `psvm` + `Enter` : main 메소드 생성
+    
+        ![image](https://github.com/shdbwls66/backendJava/assets/168792230/d58b77a2-dee8-4707-b2ba-4361931d75e7)
+
+        
+    - `shift` + `F6` : 파일 이름 바꾸기
+
+</aside>
 
 
 
