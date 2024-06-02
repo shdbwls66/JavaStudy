@@ -478,7 +478,7 @@ public class day2_Test6 {
     4. `ctrl + shift + k` 로 푸쉬 창 열고 푸쉬하기
   
   
-    원하는 파일만 커밋 하는 방법
+   **원하는 파일만 커밋 하는 방법**
   
     1.  `gitignore` 파일 우클릭 - Add template (없으면 ignore 플러그인 설치)
   
