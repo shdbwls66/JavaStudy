@@ -9,5 +9,6 @@ public class day3_Test4 {
     String findChar = "What is your hobby?";
     System.out.println(findChar.charAt(6));
     System.out.println(findChar.charAt(13)+""+findChar.charAt(14)+""+findChar.charAt(15)+""+findChar.charAt(16)+""+findChar.charAt(17));
+    System.out.println(findChar.charAt(13)+findChar.charAt(14)+findChar.charAt(15)+findChar.charAt(16)+findChar.charAt(17));
   }
 }

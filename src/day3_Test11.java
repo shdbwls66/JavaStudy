@@ -7,13 +7,13 @@ public class day3_Test11 {
       System.out.println("하늘에서 비가와용");
     }
     if (!isRaining){
-      System.out.println("하늘에서 눈이와요");
+      System.out.println("하늘에서 눈이와용");
     }
 
     boolean isSunny = false;
 
     if (!isSunny){
-      System.out.println("날씨가 맑아요");
+      System.out.println("날씨가 맑아용");
     } else{
       System.out.println("");
     }
