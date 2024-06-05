@@ -27,7 +27,7 @@ String a = new String("Hello");
 ### 문자열 선언하고 출력해보기
 - 여러 요소들을 출력할 때 `+`로 결합
 ```java
-public class day3_Test {
+public class day3.day3_Test {
   public static void main(String[] args) {
 
     String firstName = "Yujin";

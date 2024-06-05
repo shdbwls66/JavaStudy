@@ -138,7 +138,7 @@ int a = 10; // 원시타입은 stack 으로 슝~
     - 최대값은 127
 
 ```java
-public class day2_Test {
+public class day2.day2_Test {
 	  public static void main(String[] args) {
 				byte a = 1;
 		}
@@ -158,7 +158,7 @@ public class day2_Test {
     - 작은 따옴표 사용
 
 ```java
-public class day2_Test2 {
+public class day2.day2_Test2 {
     public static void main(String[] args){
         char c1 = 'A';            //문자 직접 저장
         char c2 = 65;             // 10진수
@@ -194,7 +194,7 @@ public class day2_Test2 {
     - 16비트 정수형 데이터 타입
 
 ```java
-public class day2_Test3 {
+public class day2.day2_Test3 {
   public static void main(String[] args) {
      short sVal = 10;
      short result = (short) (sVal + 10);
@@ -216,7 +216,7 @@ public class day2_Test3 {
     - 가장 많이 사용되는 정수형
 
 ```java
-public class day2_Test3 {
+public class day2.day2_Test3 {
   public static void main(String[] args) {
      int a = 10 + 220;
      System.out.println(a);
@@ -297,15 +297,17 @@ System.out.println("Calculated float value: " + anotherFloat);
 - 논리값 저장
 
 ```java
+import day2.day2_Test5;
+
 public class day2_Test4 implements day2_Test5 {
-  public static void main(String[] args) {
-    boolean isTrue = false;
-    if (!isTrue) {
-      System.out.println("이건트루");
-    } else {
-      System.out.println("이건펄스");
+    public static void main(String[] args) {
+        boolean isTrue = false;
+        if (!isTrue) {
+            System.out.println("이건트루");
+        } else {
+            System.out.println("이건펄스");
+        }
     }
-  }
 }
 ```
 
@@ -358,7 +360,7 @@ String name = new String("sung yeon");
 이런 느낌?
 
 ```java
-public class day2_Test4 {
+public class day2.day2_Test4 {
   public static void main(String[] args) {
 		//변수 생성 등등
   }
@@ -375,7 +377,7 @@ public class day2_Test4 {
 (클래스가 인터페이스를 구현한 모습은 클래스 항목 참조)
 
 ```java
-public interface day2_Test5 {
+public interface day2.day2_Test5 {
 		// 구현 강제할 메서드 작성
 
 }
@@ -386,7 +388,7 @@ public interface day2_Test5 {
 인터페이스 파일 생성
 
 ```java
-public interface day2_Test5 {
+public interface day2.day2_Test5 {
     void walk();
 
 }
@@ -396,6 +398,8 @@ public interface day2_Test5 {
 `alt + Enter` -> 메서드 구현
 
 ```java
+import day2.day2_Test5;
+
 public class day2_Test4 implements day2_Test5
 ```
 
@@ -403,14 +407,16 @@ public class day2_Test4 implements day2_Test5
 이 walk 속성은 다른 인간들에게도 부여할 수 있음 (등장인물 프로필 느낌..?)
 
 ```java
-public class day2_Test4 implements day2_Test5 {
-  public static void main(String[] args) {
-		String human = "김땡땡"
-  }
+import day2.day2_Test5;
 
-  @Override
-  public void walk() {
-  }
+public class day2_Test4 implements day2_Test5 {
+    public static void main(String[] args) {
+        String human = "김땡땡"
+    }
+
+    @Override
+    public void walk() {
+    }
 }
 ```
 
@@ -425,7 +431,7 @@ public class day2_Test4 implements day2_Test5 {
 데이터 타입이 int이고 크기가 5로 고정된 배열 arr
 
 ```java
-public class day2_Test6 {
+public class day2.day2_Test6 {
   public static void main(String[] args) {
     int[] arr = new int[5]; // 크기 고정
     System.out.println(arr[0]);
