@@ -8,8 +8,6 @@ public class day6_Test6 {
     int student = scanner.nextInt();
     scanner.nextLine();
 
-    String grade = "";
-
     for (int i = 1; i <= student; i++) {
       System.out.println("학생 이름 입력하세요");
       String name = scanner.nextLine();
@@ -26,6 +24,7 @@ public class day6_Test6 {
 
       int score = lang + eng + math;
       double avg = (double) score / 3;
+      String grade;
 
       if (avg >= 90) {
         grade = "A";
