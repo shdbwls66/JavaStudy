@@ -42,12 +42,15 @@ System.out.println("나머지: " + remainder);
 피연산자의 크기에 알맞은 **형변환**이 필요
 
 - 피연산자들이 모두 int보다 크기가 작을 때 int로 변환 후 연산
+
 ![image](https://github.com/shdbwls66/backendJava/assets/168792230/4b5e93b9-98a9-436c-a9d0-ce2581b0e208)
 
 - 피연산자 중 long 타입이 있다면 모두 long 으로 변환
+
 ![image](https://github.com/shdbwls66/backendJava/assets/168792230/0d2e949e-2514-46cb-8029-0b6046185749)
 
 - 피연산자 중 float 혹은 double 타입이 있다면 크기가 큰 실수 타입으로 변환 후 연산
+
 ![image](https://github.com/shdbwls66/backendJava/assets/168792230/012786ce-f705-44f5-b86a-033fb1fa59a5)
 
 
@@ -414,54 +417,54 @@ if (number > 10) {
 
 - 문제
 
-당신은 두 개의 정수 변수 **`a`**와 **`b`**를 가지고 있습니다. 이 변수들에 대해 다음 조건을 만족하는 프로그램을 작성하세요
+    - 당신은 두 개의 정수 변수 `a`와 `b`를 가지고 있습니다. 이 변수들에 대해 다음 조건을 만족하는 프로그램을 작성하세요
     
     - `a`가 `b`보다 크면 "a is greater than b"를 출력합니다.
     - `a`와 `b`가 같으면 "a and b are equal"을 출력합니다.
     - `a`가 `b`보다 작으면 "a is less than b"를 출력합니다.
     
-    ```java
-    int a = 10;
-    int b = 20;
-    
-    if (a > b) {
-      System.out.println("a is greater than b");
-    } else if (a < b) {
-      System.out.println("a is less than b");
-    } else {
-      System.out.println("a and b are equal");
-    }
-    ```
-    
-    ![image](https://github.com/shdbwls66/backendJava/assets/168792230/6092164c-14c2-483c-9037-5fe78b575274)
+```java
+int a = 10;
+int b = 20;
+
+if (a > b) {
+  System.out.println("a is greater than b");
+} else if (a < b) {
+  System.out.println("a is less than b");
+} else {
+  System.out.println("a and b are equal");
+}
+```
+
+![image](https://github.com/shdbwls66/backendJava/assets/168792230/6092164c-14c2-483c-9037-5fe78b575274)
     
 
 - 논리 연산자 문제
     
-당신은 세 개의 불리언(boolean) 변수 **`x`**, **`y`**, **`z`**를 가지고 있습니다. 이 변수들에 대해 다음 조건을 만족하는 프로그램을 작성하세요:
+    - 당신은 세 개의 불리언(boolean) 변수 `x`, `y`, `z`를 가지고 있습니다. 이 변수들에 대해 다음 조건을 만족하는 프로그램을 작성하세요:
     
-  - `x`가 `true`이고, `y`가 `false`일 때, "조건 1 충족"을 출력합니다.
-  - `y`와 `z` 둘 다 `true`이거나, `x`와 `z` 둘 다 `false`일 때, "조건 2 충족"을 출력합니다.
-  - `x`, `y`, `z` 중 하나라도 `true`이면 "적어도 하나는 참"을 출력합니다.
-  - 세 변수 모두 `false`일 때, "모두 거짓"을 출력합니다.
+    - `x`가 `true`이고, `y`가 `false`일 때, "조건 1 충족"을 출력합니다.
+    - `y`와 `z` 둘 다 `true`이거나, `x`와 `z` 둘 다 `false`일 때, "조건 2 충족"을 출력합니다.
+    - `x`, `y`, `z` 중 하나라도 `true`이면 "적어도 하나는 참"을 출력합니다.
+    - 세 변수 모두 `false`일 때, "모두 거짓"을 출력합니다.
     
     (y = false로 선언하고 y 그냥 출력해도 true 나옴)
     
-    ```java
-    boolean x = true, y = true, z = true;
-    if (x && !y) {
-      System.out.println("조건 1 충족");
-    }
-    if ((y && z) || (!x && !z)) {
-      System.out.println("조건 2 충족");
-    }
-    if (x || y || z) {
-      System.out.println("적어도 하나는 참");
-    }
-    if (!x && !y && !z) {
-      System.out.println("모두 거짓");
-    }
-    ```
+```java
+boolean x = true, y = true, z = true;
+if (x && !y) {
+  System.out.println("조건 1 충족");
+}
+if ((y && z) || (!x && !z)) {
+  System.out.println("조건 2 충족");
+}
+if (x || y || z) {
+  System.out.println("적어도 하나는 참");
+}
+if (!x && !y && !z) {
+  System.out.println("모두 거짓");
+}
+```
 
 
 
