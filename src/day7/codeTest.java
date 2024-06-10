@@ -1,6 +1,10 @@
+package day7;
+
 public class codeTest {
   public static void main(String[] args) {
     System.out.println(getMiddleThree("덮밥"));
+    System.out.println(getMiddleThree("Monitor"));
+    System.out.println(getMiddleThree("add"));
   }
 
   //  public class MyClass {

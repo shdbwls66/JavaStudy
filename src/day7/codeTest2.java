@@ -1,7 +1,9 @@
-import org.w3c.dom.ls.LSOutput;
+package day7;
 
 public class codeTest2 {
   public static void main(String[] args) {
+    System.out.println(barkingDogProblem(true, 5));
+    System.out.println(barkingDogProblem(false, 22));
     System.out.println(barkingDogProblem(true, 9));
   }
 

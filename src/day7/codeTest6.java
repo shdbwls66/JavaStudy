@@ -1,3 +1,5 @@
+package day7;
+
 public class codeTest6 {
   public static void main(String[] args) {
     printHello(100);

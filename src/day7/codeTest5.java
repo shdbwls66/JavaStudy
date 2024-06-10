@@ -1,8 +1,11 @@
+package day7;
+
 public class codeTest5 {
   public static void main(String[] args) {
     int[] arr1 = {1, 2, 3, 4, 5};
     int[] arr2 = {1, 2, 3, 4, 5};
     System.out.println(search(arr1, 9));
+    System.out.println(search(arr2, 3));
   }
 
   public static int search(int[] nums, int target) {

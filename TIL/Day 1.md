@@ -171,7 +171,7 @@ System.out.println(1);
 ```java
 /**
  * @author 노유진
- * @implNote test
+ * @implNote day7.test
  */
 ```
 
