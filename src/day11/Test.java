@@ -3,11 +3,11 @@ package day11;
 public class Test {
   public static void main(String[] args) {
 
-//    CatAbstract cat = new CatAbstract();
-//    cat.sound();
-//
-//    DogAbstract dog = new DogAbstract();
-//    dog.sound();
+    //    CatAbstract cat = new CatAbstract();
+    //    cat.sound();
+    //
+    //    DogAbstract dog = new DogAbstract();
+    //    dog.sound();
 
     SmartPhone smartPhone = new SmartPhone("노유진");
 
