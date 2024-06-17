@@ -1,7 +1,7 @@
 package weekly;
 
 public class Clothing extends Product {
-  String size;
+  private String size;
 
   public Clothing(String productName, int price, int stock, String size) {
     super(productName, price, stock);
@@ -18,8 +18,7 @@ public class Clothing extends Product {
 
   @Override
   int calculatePrice(){
-    int result = getSize().contains("L") ? getPrice() + (1 + (10/100)) : getPrice();
-    setPrice(result);
-    return this.price;
+    return this.size.contains("L") ? getPrice() + (1 + (10/100)) : getPrice();
+
   }
 }

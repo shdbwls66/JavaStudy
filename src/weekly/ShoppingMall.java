@@ -1,35 +1,35 @@
 package weekly;
 
-import java.util.ArrayList;
-import java.util.List;
+public class ShoppingMall extends Product {
+  Product[] productList;
+  int count;
 
-public abstract class ShoppingMall extends Product {
-    List<Product> productList = new ArrayList<>();
+  public ShoppingMall(String productName, int price, int stock, int listSize) {
+    super(productName, price, stock);
+    this.productList = new Product[listSize];
+    this.count = 0;
+  }
 
-    public ShoppingMall(String productName, int price, int stock, List<Product> productList) {
-        super(productName, price, stock);
-        this.productList = productList;
+  public void addProduct(Product product) {
+    if (count == productList.length) {
+      Product[] newProductList = new Product[productList.length * 2];
+      for (int i = 0; i < productList.length; i++) {
+        newProductList[i] = productList[i];
+      }
     }
+    productList[count++] = product;
+  }
 
-    // 제품 추가
-    public void setProductList(String productName, int price, int stock) {
+  public void removeProduct(Product product){
+      productList[count--] = null;
 
+  }
 
+  public void displayProducts(){
+    for (Product list: productList){
+      System.out.println(list);
     }
+  }
 
-    public void setProductList(String productName) {
-        getProductList();
-
-    }
-
-    // 제품 목록 출력
-    public void setProductList() {
-        this.productList = productList;
-    }
-
-    public void getProductList(){
-        return;
-    }
-
-    public abstract boolean checkOrderAvailability();
+//  public abstract boolean checkOrderAvailability();
 }

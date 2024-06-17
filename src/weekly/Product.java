@@ -1,8 +1,8 @@
 package weekly;
 
 public class Product {
-    String productName;
-    int price;
+    private String productName;
+    private int price;
     private int stock;
 
     public Product(String productName, int price, int stock) {
@@ -23,9 +23,9 @@ public class Product {
         this.stock = stock;
     }
 
-//    public String getProductName() {
-//        return productName;
-//    }
+    public String getProductName() {
+        return productName;
+    }
 
     public int getPrice() {
         return price;

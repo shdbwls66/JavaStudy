@@ -5,6 +5,7 @@ public class Class {
     ZooKeeper zooKeeper = new ZooKeeper();
 
     Tiger tiger = new Tiger();
+    tiger = new Tiger();
     zooKeeper.feed(tiger);
 
     Lion lion = new Lion();
@@ -14,6 +15,6 @@ public class Class {
     zooKeeper.feed2(rabbit);
 
     Deer deer = new Deer();
-    zooKeeper.feed2(rabbit);
+    zooKeeper.feed2(deer);
   }
 }
