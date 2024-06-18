@@ -1,6 +1,6 @@
 package weekly;
 
-public class Food extends Product {
+public class Food extends Product implements ProductList {
   private int expirationDate;
 
   public Food(String productName, int price, int stock, int expirationDate) {
@@ -8,16 +8,21 @@ public class Food extends Product {
     this.expirationDate = expirationDate;
   }
 
-  public int getExpirationDate() {
-    return expirationDate;
-  }
-
   public void setExpirationDate(int expirationDate) {
     this.expirationDate = expirationDate;
   }
 
+  public int getExpirationDate() {
+    return expirationDate;
+  }
+
   @Override
-  public int calculatePrice(){
-      return this.expirationDate <= 7 ? getPrice() - (1 + (20 / 100)) : getPrice();
+  double calculatePrice(){
+      return getExpirationDate() <= 7 ? getStock() * (getPrice() - (getPrice() * 0.2)) : getStock() * getPrice();
+  }
+
+  @Override
+  public void displayProducts() {
+    System.out.println(getProductName() +": " + getExpirationDate());
   }
 }

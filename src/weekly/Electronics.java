@@ -1,6 +1,6 @@
 package weekly;
 
-public class Electronics extends Product {
+public class Electronics extends Product implements ProductList {
   private String brand;
 
   public Electronics(String productName, int price, int stock, String brand) {
@@ -17,7 +17,12 @@ public class Electronics extends Product {
   }
 
   @Override
-  public int calculatePrice() {
-    return this.brand.equals("Apple") ? getPrice() + (1 + (20 / 100)) : getPrice();
+  double calculatePrice() {
+    return getBrand().equals("Apple") ? getStock() * (getPrice() * 1.2) : getStock() * getPrice();
+  }
+
+  @Override
+  public void displayProducts() {
+    System.out.println(getProductName() + ": " + getBrand());
   }
 }

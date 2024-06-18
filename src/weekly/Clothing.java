@@ -1,6 +1,8 @@
 package weekly;
 
-public class Clothing extends Product {
+import javax.swing.*;
+
+public class Clothing extends Product implements ProductList {
   private String size;
 
   public Clothing(String productName, int price, int stock, String size) {
@@ -17,8 +19,13 @@ public class Clothing extends Product {
   }
 
   @Override
-  int calculatePrice(){
-    return this.size.contains("L") ? getPrice() + (1 + (10/100)) : getPrice();
+  double calculatePrice(){
+    return getSize().contains("L") ? getStock() * (getPrice() * 1.1) : getStock() * getPrice();
 
+  }
+
+  @Override
+  public void displayProducts(Clothing clothing) {
+    System.out.println(getProductName() + ": " + getSize());
   }
 }
