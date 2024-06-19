@@ -13,7 +13,7 @@ public class Test {
     // cloth 몰에 추가
     clothingMall.addProduct(pants);
     clothingMall.addProduct(jacket);
-    clothingMall.displayProducts();
+    clothingMall.displayProducts(); // 출력
 
     System.out.println("==============================");
 
@@ -26,6 +26,7 @@ public class Test {
     System.out.println("==============================");
     System.out.println("==============================");
 
+    // 전자 제품
     PremiumShoppingMall electronicMall = new PremiumShoppingMall(3);
     Electronics mac = new Electronics("mac", 3000, 33, "Apple");
     electronicMall.addProduct(mac);
@@ -38,22 +39,23 @@ public class Test {
     System.out.println("==============================");
     System.out.println("==============================");
 
+    // 음식
     PremiumShoppingMall foodMall = new PremiumShoppingMall(3);
 
     Food milk = new Food("milk", 2500, 10, 8);
     Food cocaCola = new Food("cocaCola", 1500, 5, 10);
-    Food gimbap = new Food("gimbap", 2500, 5, 2);
-    Food gimbap2 = new Food("gimbap2", 3500, 10, 8);
+    Food gimBap = new Food("gimBap", 2500, 5, 2);
+    Food gimBap2 = new Food("gimBap2", 3500, 10, 8);
 
     foodMall.addProduct(milk);
     foodMall.addProduct(cocaCola);
-    foodMall.addProduct(gimbap);
-    foodMall.addProduct(gimbap2);
+    foodMall.addProduct(gimBap);
+    foodMall.addProduct(gimBap2);
     foodMall.displayProducts();
 
     System.out.println("==========================");
 
-    foodMall.removeProduct(gimbap);
+    foodMall.removeProduct(gimBap);
     foodMall.displayProducts();
 
     System.out.println("==========================");

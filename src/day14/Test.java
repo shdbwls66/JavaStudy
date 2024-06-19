@@ -1,28 +1,30 @@
 package day14;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
 public class Test {
   public static void main(String[] args) {
-    List<String> arrayList = new ArrayList<>();
-    List<String> linkedList = new LinkedList<>();
 
-    long startTime, endTime;
-    startTime = System.nanoTime();
-    for (int i = 0; i < 10000; i++) {
-      arrayList.add(String.valueOf(i));
-    }
-    endTime = System.nanoTime();
-    System.out.println("arrayList 걸린시간: " + (endTime - startTime));
+        List<String> arrayList = new ArrayList<>(10000);
+        List<String> linkedList = new LinkedList<>();
 
-    startTime = System.nanoTime();
-    for (int i = 0; i < 10000; i++) {
-      linkedList.add(String.valueOf(i));
-    }
-    endTime = System.nanoTime();
-    System.out.println("linkedList 걸린시간: " + (endTime - startTime));
+        long startTime, endTime;
+        startTime = System.nanoTime();
+        for (int i = 0; i < 10000; i++) {
+          arrayList.add(String.valueOf(i));
+        }
+        endTime = System.nanoTime();
+        System.out.println("arrayList 걸린시간: " + (endTime - startTime));
+
+        startTime = System.nanoTime();
+        for (int i = 0; i < 10000; i++) {
+          linkedList.add(String.valueOf(i));
+        }
+        endTime = System.nanoTime();
+        System.out.println("linkedList 걸린시간: " + (endTime - startTime));
 
     //    List<String> arrayList = new ArrayList<>();
     //    arrayList.add("Java");
@@ -35,10 +37,26 @@ public class Test {
     //
     //    System.out.println("=================");
     //
-    //    System.out.println("두 번째 인덱스: " + arrayList.get(2));
+    //    for(String str : arrayList){
+    //      System.out.println(str);
+    //    }
+    //
+    //    System.out.println("=================");
+    //
+    //    arrayList.add(2, "hello");
+    //    for(String str : arrayList){
+    //      System.out.println(str);
+    //    }
+    //
+    //    System.out.println("=================");
+    //
+    //    arrayList.remove(2);
+    //    for(String str : arrayList){
+    //      System.out.println(str);
+    //    }
     //
     //    System.out.println(arrayList.contains("java"));
-    //
+
     //    ArrayList<Object> list = new ArrayList<>();
     //    list.add(null);
     //
@@ -46,7 +64,7 @@ public class Test {
     //
     //    list.clear();
     //    System.out.println(list.isEmpty());
-
+    //
     //    for (String str : arrayList) {
     //      System.out.println(str);
     //    }
@@ -75,7 +93,6 @@ public class Test {
     //    Course<HighStudent> highStudentCourse = new Course<>("고등학생과정", 5);
     //    highStudentCourse.add(new HighStudent("고등학생"));
     //
-    //
     //    registerCourse(personCourse);
     //    registerCourse(workerCourse);
     //    registerCourse(studentCourse);
@@ -88,7 +105,6 @@ public class Test {
     //    registerCourseStudent(studentCourse);
     //    registerCourseStudent(highStudentCourse);
     //
-    //
     //    System.out.println("===================");
     //    System.out.println("===================");
     //    System.out.println("===================");
@@ -96,30 +112,30 @@ public class Test {
     //    registerCourseWorker(personCourse);
     //    registerCourseWorker(workerCourse);
 
-    //    System.out.println(compare(1, 2));
-    //    compareString("a", "a");
-    //    compareString("a", "ab");
+    //        System.out.println(compare(1, 2));
+    //        compareString("a", "a");
+    //        compareString("a", "ab");
   }
 
-  //  public static void registerCourse(Course<?> course) {
-  //    System.out.println(course.getName() + "수강생: " + Arrays.toString(course.getStudents()));
-  //  }
-  //
-  //  public static void registerCourseStudent(Course<? extends Student> course) {
-  //    System.out.println(course.getName() + "수강생: " + Arrays.toString(course.getStudents()));
-  //  }
-  //
-  //  public static void registerCourseWorker(Course<? super Worker> course) {
-  //    System.out.println(course.getName() + "수강생: " + Arrays.toString(course.getStudents()));
-  //  }
+  public static void registerCourse(Course<?> course) {
+    System.out.println(course.getName() + "수강생: " + Arrays.toString(course.getStudents()));
+  }
 
-  //  public static <T extends Number> int compare(T t1, T t2) {
-  //    double v1 = t1.doubleValue();
-  //    double v2 = t2.doubleValue();
-  //    return Double.compare(v1, v2);
-  //  }
+  public static void registerCourseStudent(Course<? extends Student> course) {
+    System.out.println(course.getName() + "수강생: " + Arrays.toString(course.getStudents()));
+  }
+
+  public static void registerCourseWorker(Course<? super Worker> course) {
+    System.out.println(course.getName() + "수강생: " + Arrays.toString(course.getStudents()));
+  }
+
+  //    public static <T extends Number> int compare(T t1, T t2) {
+  //      double v1 = t1.doubleValue();
+  //      double v2 = t2.doubleValue();
+  //      return Double.compare(v1, v2);
+  //    }
   //
-  //  public static <T extends String> void compareString(T t1, T t2) {
-  //    System.out.println(t1.equals(t2) ? "okay" : "no");
-  //  }
+  //    public static <T extends String> void compareString(T t1, T t2) {
+  //      System.out.println(t1.equals(t2) ? "okay" : "no");
+  //    }
 }
