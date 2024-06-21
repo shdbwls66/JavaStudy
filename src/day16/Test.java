@@ -11,19 +11,32 @@ import java.util.stream.Stream;
 public class Test {
   public static void main(String[] args) throws InterruptedException {
 
-    //    List<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
-    //
-    //    numbers.stream()
-    //            .filter(integer -> integer % 2 != 0)
-    //            .forEach(integer -> System.out.println(integer));
-    //
-    List<String> fruits = new ArrayList<>(Arrays.asList("apple", "banana", "melon", "a", "bb"));
-    List<String> list =
-        fruits.stream()
-                .filter(str -> str.length() <= 5)
-                .collect(Collectors.toList());
+//    List<String> words = Arrays.asList("Java", "Stream", "API", "Example");
+//
+//    List<Integer> list = words.stream()
+//            .map(str -> str.length())
+//            .collect(Collectors.toList());
+//    System.out.println(list);
 
-    System.out.println(list);
+//    String sentence = "Java Stream API Example";
+//    String[] arr = sentence.split(" ");
+//    long count = Arrays.stream(arr).count();
+//    System.out.println(count);
+
+//        List<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+//
+//        numbers.stream()
+//            .filter(integer -> integer % 2 != 0)
+//            .forEach(integer -> System.out.println(integer));
+
+        List<String> fruits = new ArrayList<>(Arrays.asList("apple", "banana", "melon", "a",
+     "bb"));
+        List<String> list =
+            fruits.stream()
+                    .filter(str -> str.length() <= 5)
+                    .collect(Collectors.toList());
+
+        System.out.println(list);
 
     //    List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
     //    List<Integer> result =
