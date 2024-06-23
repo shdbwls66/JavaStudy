@@ -1,4 +1,4 @@
-package weekly;
+package weekly.weekly02;
 
 public class Electronics extends Product {
   private String brand;

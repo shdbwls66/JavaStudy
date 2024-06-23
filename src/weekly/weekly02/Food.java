@@ -1,4 +1,4 @@
-package weekly;
+package weekly.weekly02;
 
 public class Food extends Product {
   private int expirationDate;

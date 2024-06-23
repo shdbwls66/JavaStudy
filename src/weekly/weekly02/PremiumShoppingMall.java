@@ -1,4 +1,4 @@
-package weekly;
+package weekly.weekly02;
 
 public class PremiumShoppingMall extends ShoppingMall{
 

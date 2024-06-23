@@ -8,23 +8,23 @@ import java.util.List;
 public class Test {
   public static void main(String[] args) {
 
-        List<String> arrayList = new ArrayList<>(10000);
-        List<String> linkedList = new LinkedList<>();
-
-        long startTime, endTime;
-        startTime = System.nanoTime();
-        for (int i = 0; i < 10000; i++) {
-          arrayList.add(String.valueOf(i));
-        }
-        endTime = System.nanoTime();
-        System.out.println("arrayList 걸린시간: " + (endTime - startTime));
-
-        startTime = System.nanoTime();
-        for (int i = 0; i < 10000; i++) {
-          linkedList.add(String.valueOf(i));
-        }
-        endTime = System.nanoTime();
-        System.out.println("linkedList 걸린시간: " + (endTime - startTime));
+//    List<String> arrayList = new ArrayList<>(10000);
+//    List<String> linkedList = new LinkedList<>();
+//
+//    long startTime, endTime;
+//    startTime = System.nanoTime();
+//    for (int i = 0; i < 10000; i++) {
+//      arrayList.add(String.valueOf(i));
+//    }
+//    endTime = System.nanoTime();
+//    System.out.println("arrayList 걸린시간: " + (endTime - startTime));
+//
+//    startTime = System.nanoTime();
+//    for (int i = 0; i < 10000; i++) {
+//      linkedList.add(String.valueOf(i));
+//    }
+//    endTime = System.nanoTime();
+//    System.out.println("linkedList 걸린시간: " + (endTime - startTime));
 
     //    List<String> arrayList = new ArrayList<>();
     //    arrayList.add("Java");
@@ -69,13 +69,14 @@ public class Test {
     //      System.out.println(str);
     //    }
 
-    //    ChildProduct<Tv, String, String> product = new ChildProduct<>();
-    //    product.setKind(new Tv());
-    //    product.setModel("smart TV");
-    //    product.setCompany("Samsung");
-    //
-    //    StorageImpl<Tv> tvStorage = new StorageImpl<>(100);
-    //    tvStorage.add(new Tv(), 0);
+    ChildProduct<Tv, String, String> product = new ChildProduct<>();
+    product.setKind(new Tv());
+    product.setModel("smart TV");
+    product.setCompany("Samsung");
+
+    StorageImpl<Tv> tvStorage = new StorageImpl<>(100);
+    tvStorage.add(new Tv(), 0);
+
 
     //    Course<Person> personCourse = new Course<>("일반인", 5);
     //    personCourse.add(new Person("일반인"));

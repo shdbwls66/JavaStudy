@@ -1,4 +1,4 @@
-package weekly;
+package weekly.weekly02;
 
 public class Clothing extends Product {
   private String size;

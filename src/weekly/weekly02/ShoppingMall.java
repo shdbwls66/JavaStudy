@@ -1,4 +1,4 @@
-package weekly;
+package weekly.weekly02;
 
 public abstract class ShoppingMall {
   private String[] products;
