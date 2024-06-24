@@ -22,3 +22,5 @@
 - <a href="TIL/Day 10.md">10일차: 클래스 #2 </a>
 ### 상속
 - <a href="TIL/Day 11.md">11일차: 상속 </a>
+### 예외처리
+- <a href="TIL/Day 12.md">12일차: 예외처리 </a>
