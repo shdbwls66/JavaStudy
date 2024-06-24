@@ -13,6 +13,7 @@ public class Main {
     Book<String> book03 = new Book<>("판타지 수학대전 1: 진리의 열쇠", "그림나무", "book03");
     Book<String> book04 = new Book<>("판타지 수학대전 2: 수학의 신전", "그림나무", "book04");
     Book<String> book05 = new Book<>("판타지 수학대전 2: 수학의 신전", "그림나무", "book05");
+    Book<String> book06 = new Book<>("abcdefu", "b", "book06");
 
     // bookShelf 리스트에 book 객체 삽입
     bookShelf.addBook(book01);
@@ -20,25 +21,31 @@ public class Main {
     bookShelf.addBook(book03);
     bookShelf.addBook(book04);
     bookShelf.addBook(book05);
+    bookShelf.addBook(book06);
 
     // 리스트 조회
-    bookShelf.lookUp();
+    //    bookShelf.lookUp();
     System.out.println("=========================");
 
     // 리스트 검색
-    System.out.println(bookShelf.searchByTitle("판타지"));
-    System.out.println(bookShelf.searchByTitle("바보"));
+    //    System.out.println(bookShelf.searchByTitle("판타지"));
+    //    System.out.println(" ");
+    //    System.out.println(bookShelf.searchByTitle("목록에 없는 제목"));
+    //    System.out.println(bookShelf.searchByTitle("A"));
 
-    System.out.println("=========================");
+    //    System.out.println("=========================");
 
-    System.out.println(bookShelf.searchByAuthor("송도수"));
+    //    System.out.println(bookShelf.searchByAuthor("그림나무"));
+    //    System.out.println(" ");
+    //    System.out.println(bookShelf.searchByAuthor("목록에 없는 작가"));
+    //    System.out.println(bookShelf.searchByAuthor("B"));
 
     // bookShelf 리스트에서 중복되는 인스턴스 제거
-    bookShelf.removeBook(book05);
+    //    bookShelf.removeBook(book05);
 
     // 리스트 조회
-    System.out.println("=========================");
-    bookShelf.lookUp();
+    //    System.out.println("=========================");
+    //    bookShelf.lookUp();
 
     try {
       // BookStack 인스턴스 생성
@@ -59,11 +66,14 @@ public class Main {
       System.out.println(bookStack.isEmpty()); // true
 
       // peekBook() 메서드
-      System.out.println(bookStack.peekBook());
-      System.out.println(bookStack.peekBook());
+//      System.out.println(bookStack.peekBook());
+//      System.out.println(bookStack.peekBook());
+//
+//      System.out.println("===========================");
+//      System.out.println(bookStack.isEmpty()); // false
 
-      System.out.println("===========================");
-      System.out.println(bookStack.isEmpty()); // false
+      // 예와 발생
+      System.out.println(bookStack.popBook());
 
     } catch (EmptyStackException e) { // 예외 처리
       System.out.println("===========================");

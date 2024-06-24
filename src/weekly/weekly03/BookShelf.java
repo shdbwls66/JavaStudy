@@ -30,14 +30,14 @@ public class BookShelf<T> implements BookManager<T> {
   @Override
   public List<Book<T>> searchByTitle(String title) {
     return books.stream()
-        .filter(book -> book.getTitle().contains(title))
+        .filter(book -> book.getTitle().contains(title.toLowerCase()) || book.getTitle().contains(title.toUpperCase()))
         .collect(Collectors.toList());
   }
 
   @Override
   public List<Book<T>> searchByAuthor(String author) {
     return books.stream()
-        .filter(book -> book.getAuthor().contains(author))
+        .filter(book -> book.getAuthor().contains(author.toLowerCase()) || book.getAuthor().contains(author.toUpperCase()))
         .collect(Collectors.toList());
   }
 }
