@@ -16,12 +16,20 @@ public class BookShelf<T> implements BookManager<T> {
     books.add(book);
   }
 
+  public void addBook(int index, Book<T> book) {
+    books.add(index, book);
+  }
+
   @Override
   public void removeBook(Book<T> book) {
     books.remove(book);
   }
 
-  public void lookUp() {
+  public void removeBook(int index){
+    books.remove(index);
+  }
+
+  public void BookShelfList() {
     for (Book<T> list : books) {
       System.out.println(List.of(list));
     }

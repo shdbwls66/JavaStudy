@@ -1,3 +1,12 @@
 use test_db;
-select * from students;
-select * from classes;
+SELECT *
+FROM students AS A INNER JOIN classes AS B
+	ON A.name = B.name;
+
+SELECT *
+FROM students AS A LEFT OUTER JOIN classes AS B
+	ON A.name = B.name;
+
+SELECT *
+FROM students AS A RIGHT OUTER JOIN classes AS B
+	ON A.name = B.name;

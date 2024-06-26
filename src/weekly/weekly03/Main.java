@@ -4,16 +4,15 @@ import java.util.EmptyStackException;
 
 public class Main {
   public static void main(String[] args) {
-    // booShelf 객체 생성
+    // booShelf 인스턴스 생성
     BookShelf<String> bookShelf = new BookShelf<>();
 
-    // Book 객체 생성
+    // Book 인스턴스 생성
     Book<String> book01 = new Book<>("마법천자문 1: 불어라! 바람 풍(風)", "스튜디오 시리얼", "book01");
     Book<String> book02 = new Book<>("코믹 메이플스토리 1", "송도수", "book02");
     Book<String> book03 = new Book<>("판타지 수학대전 1: 진리의 열쇠", "그림나무", "book03");
     Book<String> book04 = new Book<>("판타지 수학대전 2: 수학의 신전", "그림나무", "book04");
     Book<String> book05 = new Book<>("판타지 수학대전 2: 수학의 신전", "그림나무", "book05");
-    Book<String> book06 = new Book<>("abcdefu", "b", "book06");
 
     // bookShelf 리스트에 book 객체 삽입
     bookShelf.addBook(book01);
@@ -21,31 +20,35 @@ public class Main {
     bookShelf.addBook(book03);
     bookShelf.addBook(book04);
     bookShelf.addBook(book05);
-    bookShelf.addBook(book06);
 
     // 리스트 조회
-    //    bookShelf.lookUp();
+    bookShelf.BookShelfList();
     System.out.println("=========================");
 
     // 리스트 검색
-    //    System.out.println(bookShelf.searchByTitle("판타지"));
-    //    System.out.println(" ");
-    //    System.out.println(bookShelf.searchByTitle("목록에 없는 제목"));
-    //    System.out.println(bookShelf.searchByTitle("A"));
+    System.out.println(bookShelf.searchByTitle("판타지"));
+    System.out.println(bookShelf.searchByTitle("목록에 없는 제목"));
 
-    //    System.out.println("=========================");
+    System.out.println("=========================");
 
-    //    System.out.println(bookShelf.searchByAuthor("그림나무"));
-    //    System.out.println(" ");
-    //    System.out.println(bookShelf.searchByAuthor("목록에 없는 작가"));
-    //    System.out.println(bookShelf.searchByAuthor("B"));
+    System.out.println(bookShelf.searchByAuthor("그림나무"));
+    System.out.println(bookShelf.searchByAuthor("목록에 없는 작가"));
 
-    // bookShelf 리스트에서 중복되는 인스턴스 제거
-    //    bookShelf.removeBook(book05);
+    // 영어로 된 Book 인스턴스 생성, bookShelf로 추가
+    Book<String> book06 = new Book<>("abcdefu", "b", "book06");
+    bookShelf.addBook(book06);
+
+    // 대소문자 구별 테스트
+    System.out.println(bookShelf.searchByTitle("A"));
+    System.out.println("=========================");
+    System.out.println(bookShelf.searchByAuthor("B"));
+
+    // bookShelf 리스트에서 중복되는 요소 제거
+    bookShelf.removeBook(book05);
 
     // 리스트 조회
-    //    System.out.println("=========================");
-    //    bookShelf.lookUp();
+    System.out.println("=========================");
+    bookShelf.BookShelfList();
 
     try {
       // BookStack 인스턴스 생성
@@ -66,31 +69,18 @@ public class Main {
       System.out.println(bookStack.isEmpty()); // true
 
       // peekBook() 메서드
-//      System.out.println(bookStack.peekBook());
-//      System.out.println(bookStack.peekBook());
-//
-//      System.out.println("===========================");
-//      System.out.println(bookStack.isEmpty()); // false
+      System.out.println(bookStack.peekBook());
+      System.out.println(bookStack.peekBook());
 
-      // 예와 발생
-      System.out.println(bookStack.popBook());
+      System.out.println("===========================");
+      System.out.println(bookStack.isEmpty()); // false
 
-    } catch (EmptyStackException e) { // 예외 처리
+    } catch (EmptyStackException e) { // EmptyStackException 예외 처리
       System.out.println("===========================");
       System.out.println("Stack이 비어있습니다");
     } finally {
       System.out.println("===========================");
       System.out.println("정상적으로 종료되었습니다!");
     }
-
-    //    System.out.println("===========================");
-
-    //    for (Map.Entry<Book<String>, Integer> entry : entries) {
-    //      String book = entry.getKey().getTitle();
-    //      String author = entry.getKey().getAuthor();
-    //      String identify = entry.getKey().getIdentifier();
-    //      int a = entry.getValue();
-    //      System.out.println(book + " " + author + " " + identify + " " + a);
-    //    }
   }
 }
