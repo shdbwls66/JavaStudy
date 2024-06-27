@@ -1,83 +1,107 @@
 package weekly.weekly03;
 
 import java.util.EmptyStackException;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class Main {
   public static void main(String[] args) {
-    // booShelf 인스턴스 생성
-    BookShelf<String> bookShelf = new BookShelf<>();
 
-    // Book 인스턴스 생성
-    Book<String> book01 = new Book<>("마법천자문 1: 불어라! 바람 풍(風)", "스튜디오 시리얼", "book01");
-    Book<String> book02 = new Book<>("코믹 메이플스토리 1", "송도수", "book02");
-    Book<String> book03 = new Book<>("판타지 수학대전 1: 진리의 열쇠", "그림나무", "book03");
-    Book<String> book04 = new Book<>("판타지 수학대전 2: 수학의 신전", "그림나무", "book04");
-    Book<String> book05 = new Book<>("판타지 수학대전 2: 수학의 신전", "그림나무", "book05");
-
-    // bookShelf 리스트에 book 객체 삽입
-    bookShelf.addBook(book01);
-    bookShelf.addBook(book02);
-    bookShelf.addBook(book03);
-    bookShelf.addBook(book04);
-    bookShelf.addBook(book05);
-
-    // 리스트 조회
-    bookShelf.BookShelfList();
-    System.out.println("=========================");
-
-    // 리스트 검색
-    System.out.println(bookShelf.searchByTitle("판타지"));
-    System.out.println(bookShelf.searchByTitle("목록에 없는 제목"));
-
-    System.out.println("=========================");
-
-    System.out.println(bookShelf.searchByAuthor("그림나무"));
-    System.out.println(bookShelf.searchByAuthor("목록에 없는 작가"));
-
-    // 영어로 된 Book 인스턴스 생성, bookShelf로 추가
-    Book<String> book06 = new Book<>("abcdefu", "b", "book06");
-    bookShelf.addBook(book06);
-
-    // 대소문자 구별 테스트
-    System.out.println(bookShelf.searchByTitle("A"));
-    System.out.println("=========================");
-    System.out.println(bookShelf.searchByAuthor("B"));
-
-    // bookShelf 리스트에서 중복되는 요소 제거
-    bookShelf.removeBook(book05);
-
-    // 리스트 조회
-    System.out.println("=========================");
-    bookShelf.BookShelfList();
-
-    try {
-      // BookStack 인스턴스 생성
+    try (Scanner scanner = new Scanner(System.in)) {
+      // booShelf 인스턴스 생성
+      BookShelf<String> bookShelf = new BookShelf<>();
       BookStack<Integer> bookStack = new BookStack<>();
+      while (true) {
+        System.out.println("원하시는 기능을 선택해주세요.");
+        System.out.println("0. 종료, 1. bookShelf 추가, 2. bookShelf 제거, 3. 검색, 4. bookShelf 리스트 조회");
+        System.out.println("5. bookStack 추가, 6. pop() 메서드, 7. peek() 메서드, 8. bookStack 상태 확인");
+        int chooseNum = scanner.nextInt();
+        scanner.nextLine();
 
-      Book<Integer> bookStack01 = new Book<>(book01.getTitle(), book01.getAuthor(), 1);
-      Book<Integer> bookStack02 = new Book<>(book02.getTitle(), book02.getAuthor(), 2);
+        // 0 선택시 종료
+        if (chooseNum == 0) {
+          System.out.println("종료합니다.");
+          break;
+        }
 
-      // bookStack에 인스턴스 추가
-      bookStack.pushBook(bookStack01);
-      bookStack.pushBook(bookStack02);
+        switch (chooseNum) {
+          case 1: // 도서 정보 입력 받고 bookShelf 추가
+            System.out.println("bookShelf 요소를 입력해주세요 (책 제목, 저자, 식별자)");
+            System.out.println("책 제목: ");
+            String title = scanner.nextLine();
 
-      // popBook() 메서드
-      System.out.println(bookStack.popBook());
-      System.out.println(bookStack.popBook());
+            System.out.println("저자: ");
+            String author = scanner.nextLine();
 
-      System.out.println("===========================");
-      System.out.println(bookStack.isEmpty()); // true
+            System.out.println("식별자: ");
+            String identifyStr = scanner.nextLine(); // String
 
-      // peekBook() 메서드
-      System.out.println(bookStack.peekBook());
-      System.out.println(bookStack.peekBook());
+            Book<String> book = new Book<>(title, author, identifyStr);
+            bookShelf.addBook(book);
+            break;
 
-      System.out.println("===========================");
-      System.out.println(bookStack.isEmpty()); // false
+          case 2: // 인덱스로 제거
+            bookShelf.BookShelfList();
+            System.out.println("제거할 도서를 선택하세요");
+            bookShelf.removeBook(scanner.nextInt());
+            break;
+
+          case 3: // 검색
+            System.out.println("검색 조건 선택(제목 / 저자)");
+            String option = scanner.nextLine();
+            System.out.println("검색명을 입력하세요");
+            if (option.equals("제목")) {
+              System.out.println(bookShelf.searchByTitle(scanner.nextLine()));
+            } else {
+              System.out.println(bookShelf.searchByAuthor(scanner.nextLine()));
+            }
+            break;
+
+          case 4: // 리스트 조회
+            System.out.println("BookShelf list");
+            bookShelf.BookShelfList();
+            break;
+
+          case 5: // bookStack 에 도서정보 추가
+            System.out.println("bookStack 요소를 입력해주세요");
+            System.out.println("책 제목: ");
+            String stackTitle = scanner.nextLine();
+
+            System.out.println("저자: ");
+            String stackAuthor = scanner.nextLine();
+
+            System.out.println("식별자: ");
+            int identifyInt = scanner.nextInt(); // Integer
+
+            Book<Integer> stack = new Book<>(stackTitle, stackAuthor, identifyInt);
+            bookStack.pushBook(stack);
+            break;
+
+          case 6: // pop() 메서드
+            System.out.println(bookStack.popBook());
+            break;
+
+          case 7: // peek() 메서드
+            System.out.println(bookStack.peekBook());
+            break;
+
+          case 8: // bookStack 이 비어있는지 여부
+            System.out.println(bookStack.isEmpty());
+            break;
+
+          default:
+            System.out.println("목록에 없는 번호 입니다!");
+            break;
+        }
+      }
 
     } catch (EmptyStackException e) { // EmptyStackException 예외 처리
       System.out.println("===========================");
       System.out.println("Stack이 비어있습니다");
+
+    } catch (InputMismatchException e) { // InputMismatchException 예외 처리
+      System.out.println("올바른 입력이 아닙니다.");
+
     } finally {
       System.out.println("===========================");
       System.out.println("정상적으로 종료되었습니다!");

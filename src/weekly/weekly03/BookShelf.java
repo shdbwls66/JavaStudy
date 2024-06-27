@@ -26,7 +26,7 @@ public class BookShelf<T> implements BookManager<T> {
   }
 
   public void removeBook(int index){
-    books.remove(index);
+    books.remove(index-1);
   }
 
   public void BookShelfList() {
