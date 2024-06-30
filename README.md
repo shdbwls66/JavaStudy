@@ -2,6 +2,7 @@
 백엔드 오르미 5기 Java, DB TIL 정리
 
 ## 목록
+### Java
 - <a href="TIL/Day 01.md">1일차: 자바 기초</a>
 - <a href="TIL/Day 02.md">2일차: 변수와 변수 타입</a>
 - <a href="TIL/Day 03.md">3일차: 문자열 타입과 단항연산자</a>
@@ -19,4 +20,6 @@
 - <a href="TIL/Day 15.md">15일차: 컬렉션 </a>
 - <a href="TIL/Day 15 (2).md">15일차 (2): LiFO / FiFO </a>
 - <a href="TIL/Day 16.md">16일차: 스레드 </a>
+
+### DB
 - <a href="TIL/Day 17.md">17일차: DB 기초와 DML </a>
